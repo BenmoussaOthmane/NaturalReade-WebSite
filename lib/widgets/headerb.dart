@@ -122,8 +122,8 @@ class DesktopHeaderB extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 20,
+                          width: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.blueAccent.withOpacity(.1),
@@ -133,9 +133,7 @@ class DesktopHeaderB extends StatelessWidget {
                             color: Colors.blueAccent,
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
+                       
                         Text(
                           'Students',
                           style: Stylettext.h16,
@@ -165,8 +163,8 @@ class DesktopHeaderB extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 20,
+                          width: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.blueAccent.withOpacity(.1),
@@ -212,8 +210,8 @@ class DesktopHeaderB extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 20,
+                          width: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.blueAccent.withOpacity(.1),
@@ -255,8 +253,8 @@ class DesktopHeaderB extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 20,
+                          width: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.blueAccent.withOpacity(.1),

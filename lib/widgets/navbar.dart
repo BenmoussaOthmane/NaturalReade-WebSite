@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webtest/app_localizations.dart';
 import 'package:webtest/styletext/colors.dart';
 import 'package:webtest/styletext/styletext.dart';
 import 'dart:convert';
@@ -51,12 +52,14 @@ class DesktopNavbar extends StatelessWidget {
             Container(
               height: highte / 1,
               width: withe / 2.4,
+              //color: Colors.black,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   FlatButton(
                     onPressed: () {
                       print('Online');
+                      print(AppLocalizations.of(context).translate('hello'));
                     },
                     child: Text(
                       'Online',
@@ -100,7 +103,8 @@ class DesktopNavbar extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 25, bottom: 25),
+                    margin: const EdgeInsets.only(top: 10, bottom: 10),
+                    height: highte/1,
                     width: withe / 12,
                     decoration: BoxDecoration(
                       color: Pinter.btn,
