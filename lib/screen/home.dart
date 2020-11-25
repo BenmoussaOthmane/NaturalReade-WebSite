@@ -4,6 +4,7 @@ import 'package:webtest/styletext/styletext.dart';
 import 'package:webtest/widgets/foter.dart';
 import 'package:webtest/widgets/header.dart';
 import 'package:webtest/widgets/navbar.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -30,9 +31,31 @@ class _HomeState extends State<Home> {
                   height: 100,
                   width: MediaQuery.of(context).size.width / 1,
                   color: Colors.grey[500],
-                  child: Text(
-                    '© NaturalSoft Ltd. All rights reserved.',
-                    style: Stylettext.h16,
+                  child: Row(
+                    children: [
+                      Text(
+                        'title'.tr().toString(),
+                        style: Stylettext.h16,
+                      ),
+                      SizedBox(width: 50,),
+                      FlatButton(
+                        onPressed: (){
+                            setState(() {
+                              EasyLocalization.of(context).locale= Locale('en','EN');
+                            });
+                        },
+                        child: Text('EN'),
+                      ),
+                      SizedBox(width: 20,),
+                      FlatButton(
+                        onPressed: (){
+                           setState(() {
+                              EasyLocalization.of(context).locale= Locale('fr','FR');
+                            });
+                        },
+                        child: Text('FR'),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: 20,)

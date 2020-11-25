@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:webtest/app_localizations.dart';
 import 'package:webtest/styletext/colors.dart';
 import 'package:webtest/styletext/styletext.dart';
 import 'dart:convert';
@@ -59,7 +58,6 @@ class DesktopNavbar extends StatelessWidget {
                   FlatButton(
                     onPressed: () {
                       print('Online');
-                      print(AppLocalizations.of(context).translate('hello'));
                     },
                     child: Text(
                       'Online',
@@ -71,7 +69,7 @@ class DesktopNavbar extends StatelessWidget {
                       print('Software');
                     },
                     child: Text(
-                      'Software',
+                      'Softwor',
                       style: Stylettext.h16,
                     ),
                   ),
