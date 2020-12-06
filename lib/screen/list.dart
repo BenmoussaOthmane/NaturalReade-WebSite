@@ -36,48 +36,54 @@ Future parseJson() async {
               );
             }
                 return GridView.builder(
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 250,crossAxisSpacing: 2.0,mainAxisSpacing: 2.0,childAspectRatio: 2.0),
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 250),
                   itemBuilder: (context,index){
-                    return Container(
-                      child: Column(
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Container(
-                              color: Colors.red,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    mydata[index]['title'],
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold
-                                    )
-                                  ),
-                                  Text(
-                                    mydata[index]['title'],
-                                    style: TextStyle(
-                                      color: Colors.grey
-                                    ),
-                                  ),
-                                  Text(
-                                    mydata[index]['title'],
-                                    style: TextStyle(
-                                      color: Colors.amber
-                                    ),
-                                  ),
-                                ],
+                    return Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Card(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(child:Container(
+                              decoration: BoxDecoration(
+                                color: Colors.grey[300].withOpacity(.5),
+                                image: DecorationImage(
+                                  image: NetworkImage(mydata[index]['photo']),
+                                  //fit: BoxFit.cover,
+                                )
                               ),
-                            ),
-                          )
-                        ],
+                            )),
+                            Expanded(
+                              child:Container(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        mydata[index]['title']
+                                      ),
+                                      Text(
+                                        mydata[index]['description']
+                                      ),
+                                      Row(children: [
+                                        Text(
+                                          mydata[index]['note']
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        )
+                                      ]
+                                    ),
+                                    Text(
+                                     mydata[index]['price']+'\$'
+                                    )
+                                    
+                                    ],
+                                  ),  
+                                )
+                              ),
+                          ],
+                        ),
                       ),
                     );
                   },
